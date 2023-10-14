@@ -1,6 +1,11 @@
 import { CCol, CContainer, CRow } from "@coreui/react";
 import  Cardusuario from "../../components/usuarios/cardusuarios";
 import { useState } from "react";
+import usuario1 from "../../assets/images/usuarios/profesora1.png";
+import usuario2 from "../../assets/images/usuarios/profesor2.png";
+import usuario3 from "../../assets/images/usuarios/profesora3.png";
+import usuario4 from "../../assets/images/usuarios/profesor4.png";
+import usuario5 from "../../assets/images/usuarios/profesor5.png";
 import  Botoncrear  from "../../components/usuarios/Botoncrear";
 import  ModalCrearUsuario  from "../../components/usuarios/modalcrearusuario";
 

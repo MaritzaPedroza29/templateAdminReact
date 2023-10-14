@@ -1,5 +1,5 @@
 import { CModalBody, CModalHeader, CModalTitle, CModal, CModalFooter, CButton } from '@coreui/react';
-import {CFormGroup, CFormLabel, CInputGroup,CFormInput,CForm} from '@coreui/react';
+import { CFormLabel, CInputGroup,CFormInput,CForm, CFormGroup} from '@coreui/react';
 import React, { useState, useEffect } from 'react';
 
 const ModalCrearUsuario= ({ mostrarModal, cerrarModal, agregarUsuario, usuarios })=> {
@@ -42,7 +42,7 @@ const ModalCrearUsuario= ({ mostrarModal, cerrarModal, agregarUsuario, usuarios 
             <CModalTitle>Crear usuario</CModalTitle>
           </CModalHeader>
           <CModalBody>
-            <CFormGroup className="mb-3" controlId="formBasicEmail">
+            <div className="mb-3">
               <CFormLabel>Nombre</CFormLabel>
               <CFormInput
                 type="Text"
@@ -52,8 +52,8 @@ const ModalCrearUsuario= ({ mostrarModal, cerrarModal, agregarUsuario, usuarios 
                   setNuevoUsuario({ ...nuevoUsuario, nombre: e.target.value })
                 }
               />
-            </CFormGroup>
-            <CFormGroup className="mb-3" controlId="formBasicEmail">
+            </div>
+            <div className="mb-3">
               <CFormLabel>Correo</CFormLabel>
               <CFormInput
                 type="email"
@@ -63,14 +63,14 @@ const ModalCrearUsuario= ({ mostrarModal, cerrarModal, agregarUsuario, usuarios 
                   setNuevoUsuario({ ...nuevoUsuario, correo: e.target.value })
                 }
               />
-            </CFormGroup>
-            <CFormGroup className="mb-3" controlId="formBasicPassword">
+            </div>
+            <div className="mb-3">
               <CFormLabel>Contraseña</CFormLabel>
               <CFormInput
                 type="password"
                 placeholder="Ingrese su contraseña"
               />
-            </CFormGroup>
+            </div>
           </CModalBody>
           <CModalFooter>
             <CButton  type="submit" variant="success">Guardar</CButton>

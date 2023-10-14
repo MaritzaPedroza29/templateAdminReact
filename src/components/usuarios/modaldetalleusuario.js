@@ -3,8 +3,7 @@ import {CForm, CModalHeader, CModalTitle, CModalBody, CModalFooter,  CInputGroup
 import {CModal} from '@coreui/react';
 
 
-const Modaldetalleusuario=({props})=>{
-    const { show, handleClose, userData, agregarUsuario} = props;
+const Modaldetalleusuario=({show, handleClose, userData, agregarUsuario})=>{
     const [disabled, setDisabled] = useState(true);
     const [nuevoNombre, setNuevoNombre] = useState("");
     const [nuevoCorreo, setNuevoCorreo] = useState("");
@@ -66,7 +65,7 @@ const Modaldetalleusuario=({props})=>{
               <CModalTitle>Detalle usuario</CModalTitle>
             </CModalHeader>
             <CModalBody>
-              <CFormGroup className="mb-3" controlId="formBasicEmail">
+              <div className="mb-3">
                 <CFormLabel>Nombre</CFormLabel>
                 <CInputGroup
                   type="Text"
@@ -75,8 +74,8 @@ const Modaldetalleusuario=({props})=>{
                   onChange={(e) => setNuevoNombre(e.target.value)}
                   onClick={() => setDisabled(false)}
                 />
-              </CFormGroup>
-              <CFormGroup className="mb-3" controlId="formBasicEmail">
+              </div>
+              <div className="mb-3">
                 <CFormLabel>Correo</CFormLabel>
                 <CInputGroup
                   type="email"
@@ -85,7 +84,7 @@ const Modaldetalleusuario=({props})=>{
                   onChange={(e) => setNuevoCorreo(e.target.value)}
                   onClick={() => setDisabled(false)}
                 />
-              </CFormGroup>
+              </div>
             </CModalBody>
             <CModalFooter>
               <CButton  type="submit" variant="success">Guardar</CButton>
